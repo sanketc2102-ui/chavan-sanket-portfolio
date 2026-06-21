@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="media-query.css" />
+    <title>My Minimalist Portfolio website</title>
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Sanket Chavan</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">about</a></li>
+          <li><a href="#experience">skills</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Sanket Chavan</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">about</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img
+          src="./assets/My-Profile-Pic.jpg"
+          alt="Sanket's profile picture"
+          class="about-pic"
+        />
+      </div>
+      <div class="section__text">
+        <p class="section__text-p1">Hello I'm</p>
+        <h1 class="title">Sanket Chavan</h1>
+        <p class="section__text-p2">Front-end developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Sanket_Chavan_resume_dev.pdf')"
+          >
+            Dwonload CV
+          </button>
+          <button
+            class="btn btn-color-1"
+            onclick="location.href= './#contact' "
+          >
+            Contact Info
+          </button>
+        </div>
+        <div class="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="MY linkedIn profile"
+            class="icon"
+            onclick="location.href = `https://www.linkedin.com/in/sanket-chavan-769356263`  "
+          />
+          <img
+            src="./assets/github.png"
+            alt="MY GitHub profile"
+            class="icon"
+            onclick="location.href = `https://github.com/sanketCy`  "
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <p class="section__text-p1">Get to know more</p>
+      <h1 class="title">About me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/My-aobut-Pic.jpg"
+            alt="Profile pic"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="experience"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>
+                2years <br />
+                Forntend Development
+              </p>
+            </div>
+            <div class="details-container">
+              <img src="./assets/education.png" alt="experience" class="icon" />
+              <h3>Education</h3>
+              <p>
+                Batchloers degreee of commerce (b.com) <br />
+                CGPA:- 9.52
+              </p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              A self-taught frontend developer with a non-traditional
+              background, skilled in HTML, CSS, and JavaScript, and specialized
+              in React. Committed to honing my expertise in React and leveraging
+              it to contribute to dynamic development teams. Dedicated to
+              bringing fresh perspectives and making valuable contributions in
+              the field of web development.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="arrow leads to next section"
+        class="icon arrow"
+        onclick="location.href='./#experience' "
+      />
+    </section>
+
+    <section id="experience">
+      <p class="section__text-p1">Explore</p>
+      <h1 class="title">My Skills</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Forntend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Proficient</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Proficient</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JAVASCRIPT</h3>
+                  <p>Proficient</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>REACT</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TYPESCRIPT</h3>
+                  <p>Foundational</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TAILWIND CSS</h3>
+                  <p>Foundational</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Development Tools</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Foundational</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="checkmark icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>GitHub</h3>
+                  <p>Foundational</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="arrow leads to next section"
+        class="icon arrow"
+        onclick="location.href='./#projects' "
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text-p1">Explore My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Real-project-2.png"
+                alt="YouTube clone project"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">GameNexus</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/sanketCy/Stremfy-YouTube-clone'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://game-nexus.vercel.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Real-project-1.png"
+                alt="YouTube clone project"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">stremfy</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/sanketCy/Stremfy-YouTube-clone'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://streamfy-yt-clone-react-app.netlify.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/fast-react-pzza.png"
+                alt="YouTube clone project"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              FAST REACT PIZZA CO.
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/sanketCy/fast_React_Pizza_App'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://fast-react-pizza-beryl.vercel.app/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="arrow leads to next section"
+        class="icon arrow"
+        onclick="location.href='./#projects' "
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text-p1">Get In Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p>
+            <a href="mailto:sanketc2102@gmail.com">sanketc2102@gamil.com</a>
+          </p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="linedin icon"
+            class="icon contact-icon"
+          />
+          <p>
+            <a href="https://www.linkedin.com/in/sanket-chavan-769356263"
+              >LinkedIn</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-contanier">
+          <ul class="nav-links">
+            <li><a href="#about">about</a></li>
+            <li><a href="#experience">skills</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="#contact">contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2023 Sanket Chavan. All Rights Reserverd</p>
+    </footer>
+  </body>
+</html>
