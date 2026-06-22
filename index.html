@@ -1,381 +1,506 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="media-query.css" />
-    <title>My Minimalist Portfolio website</title>
-    <script defer src="index.js"></script>
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Sanket Chavan</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">about</a></li>
-          <li><a href="#experience">skills</a></li>
-          <li><a href="#projects">projects</a></li>
-          <li><a href="#contact">contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Sanket Chavan</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">about</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img
-          src="./assets/My-Profile-Pic.jpg"
-          alt="Sanket's profile picture"
-          class="about-pic"
-        />
-      </div>
-      <div class="section__text">
-        <p class="section__text-p1">Hello I'm</p>
-        <h1 class="title">Sanket Chavan</h1>
-        <p class="section__text-p2">Front-end developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Sanket_Chavan_resume_dev.pdf')"
-          >
-            Dwonload CV
-          </button>
-          <button
-            class="btn btn-color-1"
-            onclick="location.href= './#contact' "
-          >
-            Contact Info
-          </button>
-        </div>
-        <div class="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="MY linkedIn profile"
-            class="icon"
-            onclick="location.href = `https://www.linkedin.com/in/sanket-chavan-769356263`  "
-          />
-          <img
-            src="./assets/github.png"
-            alt="MY GitHub profile"
-            class="icon"
-            onclick="location.href = `https://github.com/sanketCy`  "
-          />
-        </div>
-      </div>
-    </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sanket Chavan — MERN Stack Developer building full-stack products with React, Node.js, Express & MongoDB." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Sanket Chavan — MERN Stack Developer</title>
+  <script defer src="index.js"></script>
+</head>
+<body>
 
-    <section id="about">
-      <p class="section__text-p1">Get to know more</p>
-      <h1 class="title">About me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/My-aobut-Pic.jpg"
-            alt="Profile pic"
-            class="about-pic"
-          />
+  <!-- NOISE TEXTURE OVERLAY -->
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- GRID BACKGROUND -->
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- AMBIENT GLOW ORBS -->
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+  <div class="orb orb-3" aria-hidden="true"></div>
+
+  <!-- ── NAV ──────────────────────────────────────── -->
+  <nav id="desktop-nav">
+    <a href="#profile" class="nav-logo">
+      <span class="logo-bracket">&lt;</span>SC<span class="logo-bracket">/&gt;</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Stack</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="./assets/Sanket_Chavan_resume_dev.pdf" target="_blank" class="nav-cta">
+      Resume <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+    </a>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <nav id="hamburger-nav">
+    <a href="#profile" class="nav-logo">
+      <span class="logo-bracket">&lt;</span>SC<span class="logo-bracket">/&gt;</span>
+    </a>
+    <div class="hamburger-menu" style="position:relative;">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Stack</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Work</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── HERO ─────────────────────────────────────── -->
+  <section id="profile">
+
+    <div class="hero-text">
+      <div class="hero-status reveal">
+        <span class="status-dot"></span>
+        <span>Available for opportunities</span>
+      </div>
+
+      <p class="hero-eyebrow reveal reveal-delay-1">
+        <span class="mono">//</span> Hey, I'm Sanket
+      </p>
+
+      <h1 class="hero-name reveal reveal-delay-2">
+        MERN Stack<br>
+        <span class="name-outline">Developer</span>
+      </h1>
+
+      <p class="hero-desc reveal reveal-delay-3">
+        I build full-stack web products end-to-end — from React UIs to Node APIs to MongoDB schemas. Self-taught, detail-driven, and obsessed with clean code.
+      </p>
+
+      <div class="hero-tech reveal reveal-delay-3">
+        <span class="tech-pill">React</span>
+        <span class="tech-pill">Node.js</span>
+        <span class="tech-pill">Express</span>
+        <span class="tech-pill">MongoDB</span>
+        <span class="tech-pill">TypeScript</span>
+      </div>
+
+      <div class="hero-actions reveal reveal-delay-4">
+        <a href="#projects" class="btn-primary">
+          View my work
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="./assets/Sanket_Chavan_resume_dev.pdf" target="_blank" class="btn-ghost">
+          Download CV
+        </a>
+      </div>
+
+      <div class="hero-socials reveal reveal-delay-4">
+        <a class="social-link" href="https://www.linkedin.com/in/sanket-chavan-769356263" target="_blank" rel="noopener" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a class="social-link" href="https://github.com/sanketCy" target="_blank" rel="noopener" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a class="social-link" href="mailto:sanketc2102@gmail.com" title="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-image reveal reveal-delay-2">
+      <div class="hero-img-container">
+        <div class="hero-img-glow"></div>
+        <div class="hero-img-frame">
+          <img src="./assets/My-Profile-Pic.jpg" alt="Sanket Chavan" />
         </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="experience"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>
-                2years <br />
-                Forntend Development
-              </p>
-            </div>
-            <div class="details-container">
-              <img src="./assets/education.png" alt="experience" class="icon" />
-              <h3>Education</h3>
-              <p>
-                Batchloers degreee of commerce (b.com) <br />
-                CGPA:- 9.52
-              </p>
-            </div>
+        <!-- Floating code snippets -->
+        <div class="code-float code-float-1">
+          <span class="mono cf-line"><span class="cf-keyword">const</span> stack = <span class="cf-string">'MERN'</span></span>
+        </div>
+        <div class="code-float code-float-2">
+          <span class="mono cf-line"><span class="cf-fn">useState</span>(<span class="cf-val">true</span>)</span>
+        </div>
+        <div class="code-float code-float-3">
+          <span class="mono cf-line"><span class="cf-keyword">async</span> <span class="cf-fn">buildGreat</span>()</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── ABOUT ─────────────────────────────────────── -->
+  <section id="about">
+    <div class="about-grid">
+
+      <div class="about-img-col reveal">
+        <div class="about-img-wrap">
+          <div class="about-img-border"></div>
+          <img src="./assets/My-aobut-Pic.jpg" alt="Sanket Chavan" />
+        </div>
+        <div class="about-stats">
+          <div class="stat-card reveal reveal-delay-1">
+            <span class="stat-num">2<span class="stat-plus">+</span></span>
+            <span class="stat-label">Years of experience</span>
           </div>
-          <div class="text-container">
-            <p>
-              A self-taught frontend developer with a non-traditional
-              background, skilled in HTML, CSS, and JavaScript, and specialized
-              in React. Committed to honing my expertise in React and leveraging
-              it to contribute to dynamic development teams. Dedicated to
-              bringing fresh perspectives and making valuable contributions in
-              the field of web development.
-            </p>
+          <div class="stat-card reveal reveal-delay-2">
+            <span class="stat-num">9.52</span>
+            <span class="stat-label">CGPA · B.Com Graduate</span>
+          </div>
+          <div class="stat-card reveal reveal-delay-3">
+            <span class="stat-num">10<span class="stat-plus">+</span></span>
+            <span class="stat-label">Projects shipped</span>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="arrow leads to next section"
-        class="icon arrow"
-        onclick="location.href='./#experience' "
-      />
-    </section>
 
-    <section id="experience">
-      <p class="section__text-p1">Explore</p>
-      <h1 class="title">My Skills</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Forntend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="checkmark icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Proficient</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="checkmark icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Proficient</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="checkmark icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JAVASCRIPT</h3>
-                  <p>Proficient</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="checkmark icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>REACT</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="checkmark icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TYPESCRIPT</h3>
-                  <p>Foundational</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="checkmark icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TAILWIND CSS</h3>
-                  <p>Foundational</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Development Tools</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="checkmark icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Foundational</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="checkmark icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>GitHub</h3>
-                  <p>Foundational</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="arrow leads to next section"
-        class="icon arrow"
-        onclick="location.href='./#projects' "
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text-p1">Explore My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Real-project-2.png"
-                alt="YouTube clone project"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">GameNexus</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/sanketCy/Stremfy-YouTube-clone'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://game-nexus.vercel.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
+      <div class="about-content">
+        <p class="section-eyebrow reveal"><span class="mono">01.</span> About</p>
+        <h2 class="section-title reveal reveal-delay-1">From commerce<br>to <span class="gradient-text">full-stack code</span></h2>
 
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Real-project-1.png"
-                alt="YouTube clone project"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">stremfy</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/sanketCy/Stremfy-YouTube-clone'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://streamfy-yt-clone-react-app.netlify.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/fast-react-pzza.png"
-                alt="YouTube clone project"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              FAST REACT PIZZA CO.
-            </h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/sanketCy/fast_React_Pizza_App'"
-              >
-                GitHub
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://fast-react-pizza-beryl.vercel.app/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="arrow leads to next section"
-        class="icon arrow"
-        onclick="location.href='./#projects' "
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text-p1">Get In Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="email icon"
-            class="icon contact-icon email-icon"
-          />
+        <div class="about-bio reveal reveal-delay-2">
           <p>
-            <a href="mailto:sanketc2102@gmail.com">sanketc2102@gamil.com</a>
+            I'm a <strong>self-taught MERN stack developer</strong> with an unconventional origin story — a B.Com graduate who pivoted fully into engineering. That background sharpens how I think about product: every feature decision has a business outcome attached to it.
+          </p>
+          <p>
+            I specialize in building <strong>end-to-end web applications</strong> — designing React frontends, writing Express REST APIs, and architecting MongoDB data models. I care deeply about performance, clean architecture, and the small details that make a product feel polished.
+          </p>
+          <p>
+            Looking for a team where I can ship real products, grow fast, and make a meaningful contribution from day one.
           </p>
         </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="linedin icon"
-            class="icon contact-icon"
-          />
-          <p>
-            <a href="https://www.linkedin.com/in/sanket-chavan-769356263"
-              >LinkedIn</a
-            >
-          </p>
+
+        <div class="about-highlights reveal reveal-delay-3">
+          <div class="highlight-item">
+            <div class="highlight-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <span>MERN stack end-to-end</span>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <span>REST API design & implementation</span>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <span>React + Redux state management</span>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <span>Clean UI with Tailwind &amp; CSS</span>
+          </div>
         </div>
       </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-contanier">
-          <ul class="nav-links">
-            <li><a href="#about">about</a></li>
-            <li><a href="#experience">skills</a></li>
-            <li><a href="#projects">projects</a></li>
-            <li><a href="#contact">contact</a></li>
-          </ul>
+
+    </div>
+  </section>
+
+  <!-- ── SKILLS / STACK ─────────────────────────────── -->
+  <section id="experience">
+    <div class="stack-header">
+      <p class="section-eyebrow reveal"><span class="mono">02.</span> Tech Stack</p>
+      <h2 class="section-title reveal reveal-delay-1">Tools I build with</h2>
+    </div>
+
+    <div class="stack-grid">
+
+      <!-- Frontend -->
+      <div class="stack-card reveal reveal-delay-1">
+        <div class="stack-card-header">
+          <div class="stack-icon frontend-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Frontend</h3>
+          <div class="stack-accent stack-accent-blue"></div>
         </div>
-      </nav>
-      <p>Copyright &#169; 2023 Sanket Chavan. All Rights Reserverd</p>
-    </footer>
-  </body>
+        <div class="skill-rows">
+          <div class="skill-row">
+            <span class="skill-name">React.js</span>
+            <div class="skill-track"><div class="skill-fill" data-width="88%"></div></div>
+            <span class="skill-pct">88%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">JavaScript</span>
+            <div class="skill-track"><div class="skill-fill" data-width="85%"></div></div>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">TypeScript</span>
+            <div class="skill-track"><div class="skill-fill" data-width="55%"></div></div>
+            <span class="skill-pct">55%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">HTML &amp; CSS</span>
+            <div class="skill-track"><div class="skill-fill" data-width="92%"></div></div>
+            <span class="skill-pct">92%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Tailwind CSS</span>
+            <div class="skill-track"><div class="skill-fill" data-width="75%"></div></div>
+            <span class="skill-pct">75%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Redux Toolkit</span>
+            <div class="skill-track"><div class="skill-fill" data-width="72%"></div></div>
+            <span class="skill-pct">72%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="stack-card reveal reveal-delay-2">
+        <div class="stack-card-header">
+          <div class="stack-icon backend-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+          </div>
+          <h3>Backend</h3>
+          <div class="stack-accent stack-accent-green"></div>
+        </div>
+        <div class="skill-rows">
+          <div class="skill-row">
+            <span class="skill-name">Node.js</span>
+            <div class="skill-track"><div class="skill-fill" data-width="70%"></div></div>
+            <span class="skill-pct">70%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Express.js</span>
+            <div class="skill-track"><div class="skill-fill" data-width="68%"></div></div>
+            <span class="skill-pct">68%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">REST APIs</span>
+            <div class="skill-track"><div class="skill-fill" data-width="72%"></div></div>
+            <span class="skill-pct">72%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">MongoDB</span>
+            <div class="skill-track"><div class="skill-fill" data-width="65%"></div></div>
+            <span class="skill-pct">65%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">Mongoose</span>
+            <div class="skill-track"><div class="skill-fill" data-width="62%"></div></div>
+            <span class="skill-pct">62%</span>
+          </div>
+          <div class="skill-row">
+            <span class="skill-name">JWT / Auth</span>
+            <div class="skill-track"><div class="skill-fill" data-width="60%"></div></div>
+            <span class="skill-pct">60%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="stack-card reveal reveal-delay-3">
+        <div class="stack-card-header">
+          <div class="stack-icon tools-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Tooling</h3>
+          <div class="stack-accent stack-accent-purple"></div>
+        </div>
+        <div class="tools-tags">
+          <span class="tool-tag">Git</span>
+          <span class="tool-tag">GitHub</span>
+          <span class="tool-tag">VS Code</span>
+          <span class="tool-tag">Postman</span>
+          <span class="tool-tag">Vite</span>
+          <span class="tool-tag">npm</span>
+          <span class="tool-tag">React Router</span>
+          <span class="tool-tag">Vercel</span>
+          <span class="tool-tag">Netlify</span>
+          <span class="tool-tag">Figma</span>
+          <span class="tool-tag">Chrome DevTools</span>
+          <span class="tool-tag">ESLint</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ───────────────────────────────────── -->
+  <section id="projects">
+    <div class="projects-header">
+      <p class="section-eyebrow reveal"><span class="mono">03.</span> Work</p>
+      <h2 class="section-title reveal reveal-delay-1">Selected projects</h2>
+    </div>
+
+    <div class="projects-list">
+
+      <!-- Project 1 -->
+      <article class="project-item reveal reveal-delay-1">
+        <div class="project-img-col">
+          <div class="project-img-wrap">
+            <img src="./assets/Real-project-2.png" alt="GameNexus project screenshot" loading="lazy" />
+            <div class="project-img-shine"></div>
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-meta">
+            <span class="project-num mono">01</span>
+            <div class="project-tags">
+              <span class="ptag">React</span>
+              <span class="ptag">REST API</span>
+              <span class="ptag">Tailwind</span>
+            </div>
+          </div>
+          <h3 class="project-title">GameNexus</h3>
+          <p class="project-desc">A game discovery platform pulling live data from a gaming API. Filter by genre, platform, or rating — built with React and a well-structured API layer. Focuses on data-fetching patterns and responsive UI.</p>
+          <div class="project-links">
+            <a href="https://github.com/sanketCy/Stremfy-YouTube-clone" target="_blank" rel="noopener" class="project-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              GitHub
+            </a>
+            <a href="https://game-nexus.vercel.app/" target="_blank" rel="noopener" class="project-link primary">
+              Live Demo
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-item reveal reveal-delay-2">
+        <div class="project-content">
+          <div class="project-meta">
+            <span class="project-num mono">02</span>
+            <div class="project-tags">
+              <span class="ptag">React</span>
+              <span class="ptag">YouTube API</span>
+              <span class="ptag">CSS</span>
+            </div>
+          </div>
+          <h3 class="project-title">Stremfy</h3>
+          <p class="project-desc">A full YouTube clone with real video playback, search, channel pages, and category filtering — powered by the YouTube Data API. Built with React, handling complex state for a production-grade media experience.</p>
+          <div class="project-links">
+            <a href="https://github.com/sanketCy/Stremfy-YouTube-clone" target="_blank" rel="noopener" class="project-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              GitHub
+            </a>
+            <a href="https://streamfy-yt-clone-react-app.netlify.app/" target="_blank" rel="noopener" class="project-link primary">
+              Live Demo
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="project-img-col">
+          <div class="project-img-wrap">
+            <img src="./assets/Real-project-1.png" alt="Stremfy project screenshot" loading="lazy" />
+            <div class="project-img-shine"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-item reveal reveal-delay-3">
+        <div class="project-img-col">
+          <div class="project-img-wrap">
+            <img src="./assets/fast-react-pzza.png" alt="Fast React Pizza Co. screenshot" loading="lazy" />
+            <div class="project-img-shine"></div>
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-meta">
+            <span class="project-num mono">03</span>
+            <div class="project-tags">
+              <span class="ptag">React</span>
+              <span class="ptag">Redux</span>
+              <span class="ptag">React Router</span>
+              <span class="ptag">Tailwind</span>
+            </div>
+          </div>
+          <h3 class="project-title">Fast React Pizza Co.</h3>
+          <p class="project-desc">A full-featured pizza ordering app with cart management, order tracking, GPS location integration, and priority ordering. Demonstrates complex state management with Redux Toolkit and modern React patterns.</p>
+          <div class="project-links">
+            <a href="https://github.com/sanketCy/fast_React_Pizza_App" target="_blank" rel="noopener" class="project-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              GitHub
+            </a>
+            <a href="https://fast-react-pizza-beryl.vercel.app/" target="_blank" rel="noopener" class="project-link primary">
+              Live Demo
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ── CONTACT ────────────────────────────────────── -->
+  <section id="contact">
+    <div class="contact-wrap">
+      <p class="section-eyebrow reveal"><span class="mono">04.</span> Contact</p>
+      <h2 class="section-title reveal reveal-delay-1">Let's build<br><span class="gradient-text">something together</span></h2>
+      <p class="contact-desc reveal reveal-delay-2">
+        Open to full-time roles and freelance projects. Whether you have a product idea, a team to join, or just want to talk — I'd love to hear from you.
+      </p>
+
+      <div class="contact-options reveal reveal-delay-3">
+        <a href="mailto:sanketc2102@gmail.com" class="contact-tile">
+          <div class="contact-tile-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </div>
+          <div>
+            <span class="contact-tile-label">Email</span>
+            <span class="contact-tile-value">sanketc2102@gmail.com</span>
+          </div>
+          <svg class="contact-tile-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+
+        <a href="https://www.linkedin.com/in/sanket-chavan-769356263" target="_blank" rel="noopener" class="contact-tile">
+          <div class="contact-tile-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div>
+            <span class="contact-tile-label">LinkedIn</span>
+            <span class="contact-tile-value">sanket-chavan-769356263</span>
+          </div>
+          <svg class="contact-tile-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+
+        <a href="https://github.com/sanketCy" target="_blank" rel="noopener" class="contact-tile">
+          <div class="contact-tile-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </div>
+          <div>
+            <span class="contact-tile-label">GitHub</span>
+            <span class="contact-tile-value">sanketCy</span>
+          </div>
+          <svg class="contact-tile-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+
+      <div class="reveal reveal-delay-4">
+        <a href="mailto:sanketc2102@gmail.com" class="btn-primary btn-large">
+          Say hello →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────── -->
+  <footer>
+    <a href="#profile" class="nav-logo footer-logo">
+      <span class="logo-bracket">&lt;</span>SC<span class="logo-bracket">/&gt;</span>
+    </a>
+    <ul class="footer-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Stack</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p class="footer-copy mono">// © 2026 Sanket Chavan</p>
+  </footer>
+
+</body>
 </html>
